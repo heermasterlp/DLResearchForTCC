@@ -85,7 +85,7 @@ class TrainDataProvider(object):
 
         self.train = PickledImageProvider(os.path.join(self.data_dir, train_name))
         self.val = PickledImageProvider(os.path.join(self.data_dir, val_name))
-        print("train examples -> %d, val examples -> %d" % (len(self.train), len(self.val)))
+        print("train examples -> %d, val examples -> %d" % (len(self.train.examples), len(self.val.examples)))
 
     def get_train_iter(self, batch_size, shuffle=True):
         train_examples = self.train.examples[:]
