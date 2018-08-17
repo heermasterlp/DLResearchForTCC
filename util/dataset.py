@@ -42,7 +42,7 @@ def get_batch_iter(examples, batch_size, augment):
             batch = padded[i: i + batch_size]
             processed = [process(e, augment) for e in batch]
             # stack into tensor
-            yield np.array(processed).astype(np.float32)
+            yield np.array(process()).astype(np.float32)
     return batch_iter()
 
 
